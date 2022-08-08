@@ -1,0 +1,20 @@
+node_modules
+dist
+results
+*.log
+.nyc_output
+*.tsbuildinfo
+.DS_Store
+.idea
+.editorconfig
+.vscode/
+
+# Core client
+packages/xchain-client/.DS_Store
+packages/xchain-client/yarn-error.log
+
+packages/*/lib
+packages/*/yarn.lock
+
+.env
+

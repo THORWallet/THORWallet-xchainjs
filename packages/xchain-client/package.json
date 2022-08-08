@@ -1,0 +1,27 @@
+{
+  "name": "@xchainjs/xchain-client",
+  "version": "0.12.0",
+  "license": "MIT",
+  "main": "lib/index",
+  "types": "lib/index",
+  "files": [
+    "lib"
+  ],
+  "scripts": {
+    "build": "yarn run clean && yarn run compile",
+    "clean": "rimraf -rf ./lib",
+    "compile": "tsc -p tsconfig.build.json",
+    "prepublishOnly": "yarn run build",
+    "test": "jest --passWithNoTests"
+  },
+  "devDependencies": {
+    "@xchainjs/xchain-util": "^0.5.1",
+    "@xchainjs/xchain-crypto": "^0.2.6",
+    "axios": "^0.25.0"
+  },
+  "peerDependencies": {
+    "@xchainjs/xchain-util": "^0.5.1",
+    "@xchainjs/xchain-crypto": "^0.2.6",
+    "axios": "^0.25.0"
+  }
+}

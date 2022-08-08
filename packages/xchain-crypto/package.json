@@ -1,0 +1,62 @@
+{
+  "name": "@xchainjs/xchain-crypto",
+  "version": "0.2.6",
+  "description": "XChain Crypto is a crypto module needed by all XChain clients.",
+  "main": "lib/index.js",
+  "module": "lib/index.es.js",
+  "jsnext:main": "lib/index.es.js",
+  "types": "lib/index.d.ts",
+  "files": [
+    "lib",
+    "!lib/__tests__"
+  ],
+  "scripts": {
+    "clean": "rimraf lib/**",
+    "build": "yarn clean && rollup -c",
+    "lint": "eslint \"{src,__tests__}/**/*.ts\" --fix --max-warnings 0",
+    "test": "jest --coverage",
+    "prepublishOnly": "yarn build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:xchainjs/xchainjs-lib.git"
+  },
+  "jest": {
+    "preset": "ts-jest",
+    "testEnvironment": "node",
+    "testPathIgnorePatterns": [
+      "<rootDir>/lib",
+      "<rootDir>/node_modules/"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{js,ts}": [
+      "eslint --fix",
+      "git add"
+    ]
+  },
+  "keywords": [],
+  "author": "Thorchain",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/bech32": "^1.1.2",
+    "@types/bip39": "^3.0.0",
+    "@types/crypto-js": "^4.0.2",
+    "@types/hdkey": "^2.0.0",
+    "@types/node": "^14.14.31",
+    "@types/uuid": "^8.3.1"
+  },
+  "dependencies": {
+    "bech32": "^2.0.0",
+    "bip39": "^3.0.4",
+    "crypto-js": "^4.1.1",
+    "foundry-primitives": "^0.2.1",
+    "hdkey": "^2.0.1",
+    "uuid": "^8.3.2"
+  }
+}
