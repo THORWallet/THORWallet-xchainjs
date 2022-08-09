@@ -1,5 +1,5 @@
 <h1 align="center">
-    THORWallet's implmentation of XChainJS
+    THORWallet's implementation of XChainJS
 </h1>
 
 Developed / Developing by [xchainjs](https://xchainjs.org/) and [THORWallet](https://thorwallet.org/)
